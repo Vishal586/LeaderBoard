@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = "https://leaderboard-xqxx.onrender.com";
+const API_BASE = "https://leaderboard-xqxx.onrender.com/api";
 
 export const fetchUsers = () => axios.get(`${API_BASE}/users`);
 export const addUser = (name) => axios.post(`${API_BASE}/users`, { name });
