@@ -1,0 +1,302 @@
+/* Leaderboard.css */
+
+/* Base container */
+.leaderboard-container {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.leaderboard-header {
+  background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+  padding: 1.5rem;
+  color: white;
+  text-align: center;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.leaderboard-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Main content */
+.leaderboard-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown */
+.user-dropdown {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.dropdown-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dropdown-button:hover {
+  background: #f1f3f5;
+  border-color: #d0d0d0;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  max-height: 15rem;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f5f3ff;
+}
+
+.dropdown-item.selected {
+  background: #ede9fe;
+}
+
+/* Podium */
+.podium-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .podium-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.podium-place {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.podium-place-1 {
+  background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+  border: 1px solid #ffeb3b;
+  order: 2;
+}
+
+.podium-place-2 {
+  background: linear-gradient(135deg, #e0e0e0 0%, #bdbdbd 100%);
+  border: 1px solid #9e9e9e;
+  order: 1;
+}
+
+.podium-place-3 {
+  background: linear-gradient(135deg, #ffcc80 0%, #ffb74d 100%);
+  border: 1px solid #ff9800;
+  order: 3;
+}
+
+@media (min-width: 768px) {
+  .podium-place-1 { order: 2; }
+  .podium-place-2 { order: 1; }
+  .podium-place-3 { order: 3; }
+}
+
+.place-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.badge-1 { background: #fbc02d; }
+.badge-2 { background: #757575; }
+.badge-3 { background: #fb8c00; }
+
+.place-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.avatar-1 { border-color: #fbc02d; }
+.avatar-2 { border-color: #757575; }
+.avatar-3 { border-color: #fb8c00; }
+
+.user-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.user-id {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.user-points {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6e48aa;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.points-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #888;
+}
+
+/* Leaderboard table */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table-header {
+  background: #6e48aa;
+  color: white;
+}
+
+.table-header th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.table-header th:last-child {
+  text-align: right;
+}
+
+.table-row {
+  background: white;
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: #f5f3ff;
+}
+
+.table-row td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-row:last-child td {
+  border-bottom: none;
+}
+
+.table-rank {
+  color: #666;
+  font-weight: 500;
+  width: 3rem;
+}
+
+.table-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.table-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.table-name {
+  font-weight: 500;
+}
+
+.table-id {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 0.125rem;
+}
+
+.table-points {
+  text-align: right;
+  font-weight: 600;
+  color: #6e48aa;
+}
