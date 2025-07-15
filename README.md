@@ -46,61 +46,60 @@ Ranks are dynamically updated when points change or users are added.
 | **API Requests**     | Axios                             |
 | **State Management** | useState, useEffect (React Hooks) |
 
-📁 Project Structure:-
-Leaderboard/
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── styles/
-│   │   ├── App.js
-│   │   ├── index.js
-│   └── package.json
-│
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── server.js
-│   └── package.json
-│
-└── README.md
 
 ⚙️ Setup Instructions:-
+
 1. Clone the Repository:-
+   
    git clone https://github.com/yourusername/Leaderboard.git
+   
    cd Leaderboard
 
 2. Setup Backend:-
+   
    cd backend
+   
    npm install
+   
    # Configure .env for MongoDB connection
+   
    npm start
 
 3. Setup Frontend:-
+   
    cd frontend
+   
    npm install
+   
    npm start
 
 🌐 MongoDB Atlas Configuration
 Make sure to:-
 
 Whitelist your IP in MongoDB Atlas.
+
 Add the connection string in your backend .env file:-
 
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/leaderboardDB
 
 📷 UI Screens:-
+
 Top 3 users in podium format.
+
 Dropdown for rest of the top 10.
+
 Add User form.
+
 Claim Button for bonus points.
 
 📌 Future Improvements:-
+
 User login/authentication
+
 Export leaderboard as CSV
+
 Animation for rank changes
+
 Unit testing
 
 🧑‍💻 Author
