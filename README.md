@@ -1,4 +1,5 @@
-🏆 Leaderboard Web App
+🏆 Leaderboard Web App:-
+
 A responsive and interactive Leaderboard Web Application that displays top-performing users, allows point claiming, and supports user addition functionalities. This project is built using the MERN stack (MongoDB, Express, React, Node.js) and TailwindCSS for styling.
 
 🚀 Features
